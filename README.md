@@ -29,6 +29,8 @@ python triage.py --text "$(cat pasted_email.txt)"
 
 Output lands in `./output/` by default (`--out` to change it, `--format json|markdown|both` to control what gets written).
 
+![Running triage.py against a real .eml file and pasted text, showing a HIGH-risk and a LOW-risk result](./Screenshots/cli-run-example.png)
+
 ## Example Cases
 
 Four worked examples are in [`examples/`](./examples), with their generated output committed in [`examples/output/`](./examples/output) so you can see real input/output without running anything:
@@ -45,6 +47,8 @@ Four worked examples are in [`examples/`](./examples), with their generated outp
 - **No API key required.** VirusTotal is optional and additive — every local check (blocklist, heuristics) runs regardless, so the tool is still useful in an air-gapped or budget-constrained environment.
 - **Rate-limit and cache aware.** The free VirusTotal tier is capped at 500 requests/day and 4/minute. Results are cached to disk for a week and calls are self-throttled, so re-running the tool on the same case doesn't burn quota.
 - **Explainable scoring, not a model.** Every point added to the risk score comes from a named check with a plain-English reason attached. An analyst — or an interviewer — can see exactly why a case scored the way it did.
+
+  ![Generated Markdown report for a MEDIUM-risk case, showing the point-by-point finding breakdown (e.g. "+25 ip_literal_url") behind the final score](./Screenshots/explainable-scoring-example.png)
 - **Fails soft, not hard.** Messy input, a missing API key, a network hiccup, or an unrecognized email format all degrade to "do less, but still produce a usable summary" rather than crashing.
 
 ## SOP
