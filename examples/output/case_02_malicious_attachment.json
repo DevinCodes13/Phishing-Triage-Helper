@@ -1,0 +1,42 @@
+{
+  "source": "./examples/case_02_malicious_attachment.eml",
+  "generated_at": "2026-08-15T15:04:50.744336+00:00",
+  "email": {
+    "from_address": "billing@vendor-invoices-payments.net",
+    "from_display_name": "Billing Department",
+    "reply_to": null,
+    "subject": "Invoice attached"
+  },
+  "iocs": {
+    "urls": [],
+    "domains": [
+      "vendor-invoices-payments.net"
+    ],
+    "attachments": [
+      "Invoice_84421.pdf.exe"
+    ],
+    "suspicious_attachments": [
+      "Invoice_84421.pdf.exe"
+    ]
+  },
+  "virustotal_checked": false,
+  "virustotal_results": [],
+  "findings": [
+    {
+      "check": "suspicious_attachment",
+      "detail": "Attachment 'Invoice_84421.pdf.exe' has an extension commonly used to deliver malware",
+      "points": 50,
+      "severity": "high"
+    }
+  ],
+  "risk_score": 50,
+  "risk_rating": "high",
+  "recommended_actions": [
+    "Quarantine/delete the email from all mailboxes it was delivered to",
+    "Block the sender domain and any flagged URLs/domains at the email gateway and web proxy",
+    "Notify the reporting user and any other recipients; instruct them not to click links or open attachments",
+    "If the attachment was opened, isolate the affected endpoint and run an AV/EDR scan",
+    "If any recipient may have entered credentials on a linked site, force a password reset for that account",
+    "Escalate to Tier 2 / IR if multiple users received this email or if a credential compromise is suspected"
+  ]
+}

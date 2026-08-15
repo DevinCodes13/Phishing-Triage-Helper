@@ -1,0 +1,30 @@
+{
+  "source": "./examples/case_04_legitimate_email.eml",
+  "generated_at": "2026-08-15T15:04:50.751480+00:00",
+  "email": {
+    "from_address": "sarah.chen@ourcompany.com",
+    "from_display_name": "Sarah Chen",
+    "reply_to": null,
+    "subject": "Q3 planning doc - can you take a look?"
+  },
+  "iocs": {
+    "urls": [
+      "https://drive.google.com/file/d/1a2b3c4d5e/view"
+    ],
+    "domains": [
+      "drive.google.com",
+      "ourcompany.com"
+    ],
+    "attachments": [],
+    "suspicious_attachments": []
+  },
+  "virustotal_checked": false,
+  "virustotal_results": [],
+  "findings": [],
+  "risk_score": 0,
+  "risk_rating": "low",
+  "recommended_actions": [
+    "No immediate action required based on current indicators",
+    "Archive the report; note as reviewed in the tracking log"
+  ]
+}

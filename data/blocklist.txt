@@ -1,0 +1,14 @@
+# Local domain/host blocklist for the phishing triage tool.
+# One domain per line. Exact match OR any subdomain of a listed entry
+# will trigger a hit (e.g. listing "evil-example.com" also flags
+# "login.evil-example.com").
+#
+# This is a small seed list for demo purposes -- in a real deployment
+# this would be populated from internal incident history, a threat
+# intel feed export, or synced from something like a MISP instance.
+
+secure-paypa1-verify.com
+account-appleid-confirm.net
+microsoft-support-alert.info
+malicious-test-domain.xyz
+phishing-example-payload.top

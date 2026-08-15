@@ -1,0 +1,22 @@
+From: Billing Department <billing@vendor-invoices-payments.net>
+Subject: Invoice attached
+Content-Type: multipart/mixed; boundary="BOUNDARY"
+
+--BOUNDARY
+Content-Type: text/plain
+
+Hi,
+
+Please see the attached invoice for last month's services. Let us know if
+you have any questions.
+
+Thanks,
+Accounts Payable
+
+--BOUNDARY
+Content-Type: application/octet-stream
+Content-Disposition: attachment; filename="Invoice_84421.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+--BOUNDARY--

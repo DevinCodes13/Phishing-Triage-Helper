@@ -1,0 +1,51 @@
+{
+  "source": "./examples/case_03_ambiguous_medium_risk.eml",
+  "generated_at": "2026-08-15T15:04:50.747288+00:00",
+  "email": {
+    "from_address": "it-helpdesk@company-secure-portal.xyz",
+    "from_display_name": "IT Helpdesk",
+    "reply_to": null,
+    "subject": "Password expires today - immediate action required"
+  },
+  "iocs": {
+    "urls": [
+      "http://bit.ly/3xK9zL2"
+    ],
+    "domains": [
+      "bit.ly",
+      "company-secure-portal.xyz"
+    ],
+    "attachments": [],
+    "suspicious_attachments": []
+  },
+  "virustotal_checked": false,
+  "virustotal_results": [],
+  "findings": [
+    {
+      "check": "url_shortener",
+      "detail": "bit.ly is a URL shortener -- true destination is hidden until clicked",
+      "points": 15,
+      "severity": "medium"
+    },
+    {
+      "check": "suspicious_tld",
+      "detail": "company-secure-portal.xyz uses .xyz, a TLD frequently abused for cheap throwaway phishing domains",
+      "points": 10,
+      "severity": "low"
+    },
+    {
+      "check": "urgency_language",
+      "detail": "Contains classic urgency/pressure phrasing: \"immediate action\", \"password expires\"",
+      "points": 20,
+      "severity": "medium"
+    }
+  ],
+  "risk_score": 45,
+  "risk_rating": "medium",
+  "recommended_actions": [
+    "Block the flagged domain(s) proactively pending further review",
+    "Warn the reporting user to avoid clicking any links or opening attachments",
+    "Check whether other users received the same or similar message",
+    "Re-review if VirusTotal detections increase on a later rescan (new/unknown domains often start with 0 detections)"
+  ]
+}

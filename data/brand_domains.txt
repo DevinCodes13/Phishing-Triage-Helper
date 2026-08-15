@@ -1,0 +1,27 @@
+# Legitimate domains of commonly-impersonated brands, used as the
+# reference list for typosquatting and display-name-spoofing checks.
+# Add to this list for whatever brands are most impersonated in your
+# organization's actual phishing reports (e.g. your own company domain,
+# your SSO provider, your payroll/HR system, etc.)
+
+paypal.com
+apple.com
+microsoft.com
+google.com
+amazon.com
+chase.com
+bankofamerica.com
+wellsfargo.com
+netflix.com
+docusign.com
+office.com
+outlook.com
+dropbox.com
+adobe.com
+linkedin.com
+facebook.com
+instagram.com
+irs.gov
+usps.com
+fedex.com
+ups.com
